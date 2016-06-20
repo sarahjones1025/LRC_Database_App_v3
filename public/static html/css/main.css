@@ -1,0 +1,17 @@
+/*red #c30e2e*/
+/*light grey #ebebeb*/
+
+
+.school_header{
+	background-color: #444;
+	color: #fff;
+	padding: 5% 10%;
+}
+
+.main_selector .show{
+	display: block;
+}
+
+.main_selector ul{
+	display: none;
+}
