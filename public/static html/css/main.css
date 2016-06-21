@@ -31,10 +31,15 @@
 .main_selector h2{
 	color: #444;
     font-weight: 300;
-    padding: 10px;
+    padding: 15px;
     text-align: left;
-    font-size: 1.2em;
-    margin-left: 70px;
+    font-size: 1em;
+    margin-left: 75px;
+}
+
+.main_selector:hover{
+	background-color: #c30e2e;
+	color: #fff;
 }
 
 .school_header{
@@ -71,10 +76,16 @@
     top: 15px;
     right: 20px;
     text-decoration: none;
+    color: #444;
+}
+
+.query{
+	margin-top: 25px;
 }
 
 .query_result{
-	padding: 5%;
+	border-bottom: solid 1px #444;
+	margin: 50px 0px 50px 0px;
 }
 
 .query_result h3{
