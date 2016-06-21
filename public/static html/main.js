@@ -4,11 +4,11 @@ var resultList    = document.querySelectorAll( ".result_list" );
 
 
 
-resultList.forEach(function(index) {
-	if (index = "hi") {
+	// resultList.forEach(function(index) {
+	// 	if (index = "hi") {
 
-	}
-})
+	// 	}
+	// })
 
 
 
@@ -19,7 +19,7 @@ var expandList    = function expandList( e ){
 	e.preventDefault();
 };
 
-toggleButton.addEventListener( "click", expandList );
+// toggleButton.addEventListener( "click", expandList );
 
 
 
