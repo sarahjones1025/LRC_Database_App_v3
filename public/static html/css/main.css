@@ -20,8 +20,11 @@
 }
 
 .main_selector{
-	background-color: #ebebeb;
-	position: relative;
+	background-image: url(../img/selection_bg.jpg);
+    background-repeat: no-repeat;
+    background-color: #ebebeb;
+    position: relative;
+    background-size: cover;
 }
 
 .main_selector ul{
@@ -37,8 +40,24 @@
     margin-left: 75px;
 }
 
-.main_selector:hover{
+/*.main_selector:hover{
+	background-image: none;
 	background-color: #c30e2e;
+	color: #fff;
+}*/
+
+.red_fill{
+	background-color: #c30e2e;
+	background-image: url(../img/selection_bg2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.red_fill h2{
+	color: #fff;
+}
+
+.red_fill .toggle_button{
 	color: #fff;
 }
 
@@ -73,8 +92,10 @@
 
 .toggle_button{
 	position: absolute;
-    top: 15px;
-    right: 20px;
+	top: 0;
+	bottom: 0;
+    left: 0;
+    right: 0;
     text-decoration: none;
     color: #444;
 }
