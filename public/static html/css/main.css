@@ -15,3 +15,12 @@
 .main_selector ul{
 	display: none;
 }
+
+
+.school_header a:first-child{
+	color: #fff;
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
