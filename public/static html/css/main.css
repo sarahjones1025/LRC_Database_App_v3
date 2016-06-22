@@ -16,11 +16,11 @@
 }
 
 .main_selector .show{
-	display: block;
+    display: block;
 }
 
 .main_selector{
-	background-image: url(../img/selection_bg.jpg);
+    background-image: url(../img/selection_bg.jpg);
     background-repeat: no-repeat;
     background-color: #ebebeb;
     position: relative;
@@ -29,11 +29,34 @@
 }
 
 .main_selector ul{
-	display: none;
+    display: none;
+    padding: 5%;
+}
+
+.main_selector li{
+    color: #444;
+    list-style: none;
+    line-height: 2;
+    position: relative;
+}
+
+input{
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    -webkit-appearance: none;
+    border: solid 1px #444;
+    height: 15px;
+    width: 15px;
+    background-size: cover;
+}
+
+.checked{
+    background-image: url(../img/checked.png);
 }
 
 .main_selector h2{
-	color: #444;
+    color: #444;
     font-weight: 300;
     padding: 15px;
     text-align: left;
@@ -41,36 +64,30 @@
     margin-left: 75px;
 }
 
-/*.main_selector:hover{
-	background-image: none;
-	background-color: #c30e2e;
-	color: #fff;
-}*/
-
 .red_fill{
-	background-color: #c30e2e;
-	background-image: url(../img/selection_bg2.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
+    background-image: url(../img/selection_bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .red_fill h2{
-	color: #fff;
+    color: #fff;
 }
 
 .red_fill .toggle_button{
-	color: #fff;
+    color: #fff;
+    height: 50px;
 }
 
 .school_header{
-	background-color: #444;
+    background-color: #444;
     color: #fff;
     padding: 10% 10% 1% 20%;
     position: relative;
 }
 
 .school_header a:first-child{
-	color: #fff;
+    color: #fff;
     text-decoration: none;
     position: absolute;
     top: 10px;
@@ -79,22 +96,22 @@
 }
 
 .school_header img{
-	max-width: 35%;
+    max-width: 35%;
     position: absolute;
     top: 33px;
     left: 0px;
 }
 
 .school_header h1{
-	font-size: 1.4em;
+    font-size: 1.4em;
     text-align: right;
     line-height: 1.5;
 }
 
 .toggle_button{
-	position: absolute;
-	top: 0;
-	bottom: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     text-decoration: none;
@@ -102,21 +119,25 @@
 }
 
 .query{
-	margin-top: 25px;
+    margin-top: 25px;
 }
 
 .query_result{
-	border-bottom: solid 1px #444;
-	margin: 50px 0px 50px 0px;
+    border-bottom: solid 1px #444;
+    margin: 50px 0px 50px 0px;
 }
 
 .query_result h3{
-	font-size: .8em;
-	width: 25%;
-	float: left;
-	margin: 0;
-	padding: 0;
-	text-align: center;
+    font-size: .8em;
+    width: 25%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#lesson_results li{
+    list-style: none;
 }
 
 
