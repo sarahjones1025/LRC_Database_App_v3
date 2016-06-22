@@ -1,6 +1,6 @@
-var toggleButton  = document.querySelectorAll( ".toggle_button" );
-var resultList    = document.querySelectorAll( ".result_list" );
-var mainSelector  = document.querySelectorAll( ".main_selector" );
+var toggleButton  = document.querySelector( ".toggle_button" );
+var resultList    = document.querySelector( ".result_list" );
+var mainSelector  = document.querySelector( ".main_selector" );
 
 
 
@@ -12,18 +12,19 @@ var mainSelector  = document.querySelectorAll( ".main_selector" );
 
 
 
-var expandList    = function expandList( e ){
+var expandList = function expandList( e ){
 
 	resultList.classList.toggle("show");
 
 	e.preventDefault();
 };
 
-// toggleButton.addEventListener( "click", expandList );
+toggleButton.addEventListener( "click", expandList );
 
-if(toggleButton.classList = "show"){
+if(resultList.classList.contains("show")){
 	mainSelector.classList.add("red_fill")
 }
+
 else{
 	mainSelector.classList.remove("red_fill")
 }
