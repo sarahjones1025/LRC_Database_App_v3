@@ -96,7 +96,7 @@ input{
 }
 
 .school_header img{
-    max-width: 35%;
+    width: 110px;
     position: absolute;
     top: 33px;
     left: 0px;
@@ -122,9 +122,10 @@ input{
     margin-top: 25px;
 }
 
-.query_result{
+.label{
     border-bottom: solid 1px #444;
     margin: 50px 0px 50px 0px;
+    padding-bottom: 10px;
 }
 
 .query_result h3{
@@ -140,7 +141,24 @@ input{
     list-style: none;
 }
 
+@media screen and (min-width: 600px){
 
+    .main_selector{
+        float: left;
+        width: 48%;
+        margin: 5px;
+    }
+
+    .main_selector h2{
+        padding: 0px;
+    }
+
+}
+
+.query {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
 
 
 
