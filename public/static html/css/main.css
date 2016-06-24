@@ -19,6 +19,10 @@
     display: block;
 }
 
+.main_selector .show h2{
+    color: #fff;
+}
+
 .main_selector{
     background-image: url(../img/selection_bg.jpg);
     background-repeat: no-repeat;
@@ -109,14 +113,23 @@ input{
 }
 
 .toggle_button{
+    -webkit-appearance: none;
+    border: none;
     position: absolute;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    right: 5px;
     text-decoration: none;
     color: #444;
+    background: none;
+    width: 55px;
+    height: 47px;
 }
+
+.button:focus{
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 
 .query{
     margin-top: 25px;

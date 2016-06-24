@@ -9,42 +9,43 @@ var container     = document.getElementById( "lesson_results");
 var newLi		  = document.createElement( "li" );
 
 
-// var expandList = function expandList( e ){
+var expandList = function expandList(){
 
-// 	resultList.classList.toggle( "show" );
+	mainSelector.classList.toggle( "red_fill" );
 
-// 	if(resultList.classList.contains( "show" )){
-// 		mainSelector.classList.add( "red_fill" )
-// 	}
-
-// 	else{
-// 		mainSelector.classList.remove( "red_fill" )
-// 	}
-
-// 	e.preventDefault();
-// };
+};
 
 
-// toggleButton.addEventListener( "click", expandList );
+toggleButton.addEventListener( "click", expandList );
 
 
-// var addFields = function addFields(){
+var addFields = function addFields(){
 
-// 	container.appendChild( newLi );
-// 	newLi.innerText = "This will have lesson info";
+	container.appendChild( newLi );
+	newLi.innerText = "List of lessons will appear here.";
 
-// };
+};
+
+var removeFields = function removeFields(){
 
 
-// var createList = function createList( e ){
 
-// 	e.classList.toggle( "checked" );
+};
 
-// 	if(e.classList.contains( "checked" )){
-// 		addFields();
-// 	}
 
-// };
+var createList = function createList( e ){
+
+	e.classList.toggle( "checked" );
+
+	if(e.classList.contains( "checked" )){
+		addFields();
+	}
+
+	else{
+	 $('.class_list').contents().remove();
+	}
+
+};
 
 cc1.addEventListener( "click", function() {
 	createList(cc1);
