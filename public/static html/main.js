@@ -8,16 +8,22 @@ var cc4 		  = document.getElementById( "core_competency_4" );
 var container     = document.getElementById( "lesson_results");
 var newLi		  = document.createElement( "li" );
 
+
+$('.toggle_button').click(function () {
+$(this).closest('.main_selector').find('.result_list').toggle();
+});
+
+
 var expandList = function expandList( e ){
 
 	resultList.classList.toggle( "show" );
 
 	if(resultList.classList.contains( "show" )){
-		mainSelector.classList.add( "red_fill" )
+		mainSelector.classList.add( "red_fill" );
 	}
 
 	else{
-		mainSelector.classList.remove( "red_fill" )
+		mainSelector.classList.remove( "red_fill" );
 	}
 
 	e.preventDefault();
