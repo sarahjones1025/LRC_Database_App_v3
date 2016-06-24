@@ -155,10 +155,10 @@ input{
 
 }
 
-.query {
-  display: -webkit-flex; /* Safari */
-  display: flex;
-}
+/*.query {
+  display: -webkit-flex;*/ /* Safari */
+ /* display: flex;
+}*/
 
 
 

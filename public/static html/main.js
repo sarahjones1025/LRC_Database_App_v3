@@ -8,42 +8,42 @@ var cc4 		  = document.getElementById( "core_competency_4" );
 var container     = document.getElementById( "lesson_results");
 var newLi		  = document.createElement( "li" );
 
-var expandList = function expandList( e ){
+// var expandList = function expandList( e ){
 
-	resultList.classList.toggle( "show" );
+// 	resultList.classList.toggle( "show" );
 
-	if(resultList.classList.contains( "show" )){
-		mainSelector.classList.add( "red_fill" )
-	}
+// 	if(resultList.classList.contains( "show" )){
+// 		mainSelector.classList.add( "red_fill" )
+// 	}
 
-	else{
-		mainSelector.classList.remove( "red_fill" )
-	}
+// 	else{
+// 		mainSelector.classList.remove( "red_fill" )
+// 	}
 
-	e.preventDefault();
-};
-
-
-toggleButton.addEventListener( "click", expandList );
+// 	e.preventDefault();
+// };
 
 
-var addFields = function addFields(){
-
-	container.appendChild( newLi );
-	newLi.innerText = "This will have lesson info";
-
-};
+// toggleButton.addEventListener( "click", expandList );
 
 
-var createList = function createList( e ){
+// var addFields = function addFields(){
 
-	e.classList.toggle( "checked" );
+// 	container.appendChild( newLi );
+// 	newLi.innerText = "This will have lesson info";
 
-	if(e.classList.contains( "checked" )){
-		addFields();
-	}
+// };
 
-};
+
+// var createList = function createList( e ){
+
+// 	e.classList.toggle( "checked" );
+
+// 	if(e.classList.contains( "checked" )){
+// 		addFields();
+// 	}
+
+// };
 
 cc1.addEventListener( "click", function() {
 	createList(cc1);
@@ -60,6 +60,10 @@ cc3.addEventListener( "click", function() {
 cc4.addEventListener( "click", function() {
 	createList(cc4);
 } );
+
+$('.toggle_button').click(function () {
+$(this).closest('.main_selector').find('.result_list').toggle();
+});
 
 
 
