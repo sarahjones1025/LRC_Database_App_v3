@@ -8,6 +8,7 @@ var cc4 		  = document.getElementById( "core_competency_4" );
 var container     = document.getElementById( "lesson_results");
 var newLi		  = document.createElement( "li" );
 
+
 // var expandList = function expandList( e ){
 
 // 	resultList.classList.toggle( "show" );
