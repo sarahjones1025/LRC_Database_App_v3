@@ -42,7 +42,7 @@ var createList = function createList( e ){
 	}
 
 	else{
-	 $('.class_list').contents().remove();
+	 $('#lesson_results').empty();
 	}
 
 };
