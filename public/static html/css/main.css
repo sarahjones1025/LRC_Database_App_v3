@@ -8,7 +8,7 @@ body{
     color: #444;
 }
 
-.export{
+/*.export{
     position: absolute;
     left: 10%;
     top: 0;
@@ -22,7 +22,7 @@ body{
     font-size: .005em;
     border-radius: 73%;
     border: none;
-}
+}*/
 
 input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 
@@ -78,8 +78,8 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 }
 
 .main_selector{
-    background-image: url(../img/selection_bg.jpg);
-    background-repeat: no-repeat;
+   /* background-image: url(../img/selection_bg.jpg);
+    background-repeat: no-repeat;*/
     background-color: #ebebeb;
     position: relative;
     background-size: cover;
@@ -301,6 +301,16 @@ main .query_result h3{
      .main_selector{
         width: calc(33.33333333% - 20px);
         margin: 5px 10px;
+    }
+
+    .main_selector h2{
+        text-align: center;
+        margin-left: 0;
+    }
+    
+
+    .box_1, .box_2{
+        width: calc(50% - 20px);
     }
 
 }
