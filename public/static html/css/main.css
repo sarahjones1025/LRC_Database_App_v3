@@ -8,6 +8,22 @@ body{
     color: #444;
 }
 
+.export{
+    position: absolute;
+    left: 10%;
+    top: 0;
+    -webkit-appearance: none;
+    height: 100%;
+    width: 80%;
+    background: yellowgreen;
+    color: purple;
+    z-index: 100;
+    text-align: center;
+    font-size: .005em;
+    border-radius: 73%;
+    border: none;
+}
+
 input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 
 .clearfix:before,
@@ -53,9 +69,9 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     letter-spacing: 0.05em;
 }
 
-.main_selector .show{
+/*.main_selector .show{
     display: block;
-}
+}*/
 
 .main_selector .show h2{
     color: #fff;
@@ -67,7 +83,8 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     background-color: #ebebeb;
     position: relative;
     background-size: cover;
-    max-width: 320px;
+/*    width: calc(33.33333333% - 20px);
+*/    margin: 10px;
 }
 
 .main_selector ul{
@@ -96,6 +113,7 @@ input{
 .checked{
     background-image: url(../img/checked.png);
 }
+
 
 .main_selector h2{
     color: #444;
@@ -258,16 +276,31 @@ main .query_result h3{
     margin-bottom: 13px;
 }
     
-@media screen and (min-width: 600px){
+@media screen and (min-width: 575px){
+
+    .query{
+        display: flex;
+     /*   flex-direction: column;*/
+        flex-wrap: wrap;
+        flex: 1;
+    }
 
     .main_selector{
-        float: left;
-        width: 48%;
-        margin: 5px;
+        width: calc(50% - 20px);
+        margin: 5px 10px;
     }
 
     .main_selector h2{
         padding: 0px;
+    }
+
+}
+
+@media screen and (min-width: 900px){
+
+     .main_selector{
+        width: calc(33.33333333% - 20px);
+        margin: 5px 10px;
     }
 
 }
