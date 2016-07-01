@@ -118,6 +118,8 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     position: relative;
 }
 
+
+/*checkboxes*/
 input{
     position: absolute;
     right: 0;
@@ -309,9 +311,9 @@ main .query_result h3{
         margin: 5px 10px;
     }
 
-    .main_selector h2{
+    /*.main_selector h2{
         padding: 0px;
-    }
+    }*/
 
 }
 
