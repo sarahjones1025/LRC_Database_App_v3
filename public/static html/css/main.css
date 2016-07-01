@@ -8,22 +8,6 @@ body{
     color: #444;
 }
 
-/*.export{
-    position: absolute;
-    left: 10%;
-    top: 0;
-    -webkit-appearance: none;
-    height: 100%;
-    width: 80%;
-    background: yellowgreen;
-    color: purple;
-    z-index: 100;
-    text-align: center;
-    font-size: .005em;
-    border-radius: 73%;
-    border: none;
-}*/
-
 input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 
 .clearfix:before,
@@ -73,8 +57,36 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     display: block;
 }*/
 
-.main_selector .show h2{
-    color: #fff;
+.box_1{
+    z-index: 100;
+}
+
+.box_2{
+    z-index: 90;
+}
+
+.box_3{
+    z-index: 80;
+}
+
+.box_4{
+    z-index: 70;
+}
+
+.box_5{
+    z-index: 60;
+}
+
+.box_6{
+    z-index: 50;
+}
+
+.box_7{
+    z-index: 40;
+}
+
+.box_8{
+    z-index: 30;
 }
 
 .main_selector{
@@ -83,13 +95,20 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
     background-color: #ebebeb;
     position: relative;
     background-size: cover;
-/*    width: calc(33.33333333% - 20px);
-*/    margin: 10px;
+    margin: 10px;
+}
+
+.main_selector .show h2{
+    color: #fff;
 }
 
 .main_selector ul{
     display: none;
     padding: 5%;
+    position: absolute;
+    background-color: #ebebeb;
+    width: 90%;
+    margin: 0;
 }
 
 .main_selector li{
@@ -121,10 +140,10 @@ input{
     padding: 15px;
     text-align: left;
     font-size: 1em;
-    margin-left: 75px;
+    margin: 0 0 0 75px;
 }
 
-.red_fill{
+/*.red_fill{
     background-image: url(../img/selection_bg2.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -132,12 +151,12 @@ input{
 
 .red_fill h2{
     color: #fff;
-}
+}*/
 
-.red_fill .toggle_button{
+/*.red_fill .toggle_button{
     color: #fff;
     height: 50px;
-}
+}*/
 
 .ags_page .school_header{
     background-color: #444;
