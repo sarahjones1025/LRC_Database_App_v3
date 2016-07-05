@@ -1,7 +1,6 @@
-/*red #c30e2e*/
-/*light grey #ebebeb*/
 /*font-family Josefin Sans*/
-/*font-family Playfair Display*/
+/*font-family Playfair Display*/ 
+/*these are example fonts, not final choices!!! */
 
 body{
     font-family: Josefin Sans;
@@ -33,7 +32,6 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 }
 
 .instructions{
-    /*font-family: sans-serif;*/
     font-size: .8em;
     top: 130px;
     font-weight: 100;
@@ -301,7 +299,6 @@ main .query_result h3{
 
     .query{
         display: flex;
-     /*   flex-direction: column;*/
         flex-wrap: wrap;
         flex: 1;
     }
@@ -310,10 +307,6 @@ main .query_result h3{
         width: calc(50% - 20px);
         margin: 5px 10px;
     }
-
-    /*.main_selector h2{
-        padding: 0px;
-    }*/
 
 }
 
@@ -329,7 +322,6 @@ main .query_result h3{
         margin-left: 0;
     }
     
-
     .box_1, .box_2{
         width: calc(50% - 20px);
     }

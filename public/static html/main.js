@@ -9,11 +9,12 @@ var container     = document.getElementById( "lesson_results");
 var newLi		  = document.createElement( "li" );
 
 
-var expandList = function expandList(){
+// function to add styles to selected drop-down lists...not currently in use
+// var expandList = function expandList(){
 
-	mainSelector.classList.toggle( "red_fill" );
+// 	mainSelector.classList.toggle( "red_fill" );
 
-};
+// };
 
 
 toggleButton.addEventListener( "click", expandList );
@@ -23,12 +24,6 @@ var addFields = function addFields(){
 
 	container.appendChild( newLi );
 	newLi.innerText = "List of lessons will appear here.";
-
-};
-
-var removeFields = function removeFields(){
-
-
 
 };
 
@@ -47,6 +42,8 @@ var createList = function createList( e ){
 
 };
 
+
+// this is to demonstrate list items populating in the query result and is solely for demonstration
 cc1.addEventListener( "click", function() {
 	createList(cc1);
 } );
@@ -63,6 +60,8 @@ cc4.addEventListener( "click", function() {
 	createList(cc4);
 } );
 
+
+// expands and hides ul which gives list of available options for each category
 $('.toggle_button').click(function () {
 $(this).closest('.main_selector').find('.result_list').toggle();
 });
