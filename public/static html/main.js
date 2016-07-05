@@ -9,12 +9,12 @@ var container     = document.getElementById( "lesson_results");
 var newLi		  = document.createElement( "li" );
 
 
-// function to add styles to selected drop-down lists...not currently in use
-// var expandList = function expandList(){
+// function to add styles to selected drop-down lists
+var expandList = function expandList(){
 
-// 	mainSelector.classList.toggle( "red_fill" );
+	mainSelector.classList.toggle( "red_fill" );
 
-// };
+};
 
 
 toggleButton.addEventListener( "click", expandList );
