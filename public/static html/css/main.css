@@ -362,11 +362,26 @@ main .query_result h3{
 
 @media screen and (min-width: 900px){
 
+    .ags_page .school_header {
+        background-color: #444;
+        color: #fff;
+        padding: 3% 5% 0% 190px;
+        position: relative;
+    }
+
     .school_header img {
-        width: 85px;
+        width: 80px;
         position: absolute;
         top: 30px;
         left: 70px;
+    }
+
+    .school_header h1{
+        line-height: 2.5;
+    }
+
+    .breadcrumb{
+        margin-top: 50px;
     }
 
     .ags_page main{
