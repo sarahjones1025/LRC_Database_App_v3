@@ -15,6 +15,13 @@ input:focus, select:focus, textarea:focus, button:focus{
 
 /*****************************/
 
+label{
+    font-weight: 300;
+}
+
+a{
+    font-weight: 300;
+}
 
 /*Clearfix for handling floats*/
 
@@ -242,24 +249,35 @@ input{
 .button:focus{
     outline: none;
 }
-/*
-.query{
-    margin-top: 35px;
-}*/
 
-.label{
-    border-bottom: solid 1px #444;
-    margin: 50px 0px 50px 0px;
-    padding-bottom: 10px;
+.query_result{
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
 
-main .query_result h3{
-    font-size: .8em;
-    width: 25%;
+.label {
+    border-bottom: solid 1px #444;
+    margin: 50px 0px 50px 0px;
+    padding-bottom: 20px;
+    width: 300%;
+}
+
+main .query_result h3 {
+    font-size: 1em;
+    font-weight: 100;
+    width: 20%;
     float: left;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: left;
+}
+
+.lesson_results{
+    width: 300%;
+}
+
+#lesson_results{
+    padding: 0;
 }
 
 #lesson_results li{
