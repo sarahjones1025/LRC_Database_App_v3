@@ -72,7 +72,7 @@ $(this).closest('.main_selector').find('.result_list').toggle();
 
 
 $('#clearFilter').click(function(e) {
-		$('.checked').each(function() {
+	$('input:checkbox').each(function() {
 			$(this).prop('checked', false);
 			$(this).removeClass('checked');
 	});
