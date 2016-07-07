@@ -44,24 +44,33 @@ input:focus, select:focus, textarea:focus, button:focus{
     padding: 10px;
 }
 
+.breadcrumb{
+    margin-top: 20px;
+}
+
 .instructions{
     font-size: .8em;
-    top: 130px;
     font-weight: 100;
-    margin-top: 30px;
-    position: absolute;
+    margin: 5px 0 0 0;
+    float: left;
 }
 
 .clear_filter{
-    position: absolute;
-    right: 10px;
-    top: 154px;
     font-size: .6em;
     padding: 5px 20px;
     text-decoration: none;
     border: solid 1px #444;
     color: #444;
     letter-spacing: 0.05em;
+    float: right;
+}
+
+.breadcrumbs h3{
+
+}
+
+.breadcrumbs button{
+    float: right;
 }
 
 /*.main_selector .show{
@@ -106,7 +115,7 @@ input:focus, select:focus, textarea:focus, button:focus{
     background-color: #ebebeb;
     position: relative;
     background-size: cover;
-    margin: 10px;
+    margin: 10px 0px    ;
 }
 
 .main_selector .show h2{
@@ -171,10 +180,14 @@ input{
     height: 50px;
 }*/
 
+.school_header{
+    height: 95px;
+}
+
 .ags_page .school_header{
     background-color: #444;
     color: #fff;
-    padding: 10% 10% 1% 20%;
+    padding: 10% 10% 1% 25%;
     position: relative;
 }
 
@@ -209,7 +222,7 @@ input{
 }
 
 .school_header h1{
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-align: right;
     line-height: 1.5;
 }
@@ -230,10 +243,10 @@ input{
 .button:focus{
     outline: none;
 }
-
+/*
 .query{
     margin-top: 35px;
-}
+}*/
 
 .label{
     border-bottom: solid 1px #444;
@@ -303,7 +316,20 @@ main .query_result h3{
     margin-bottom: 13px;
 }
     
-@media screen and (min-width: 575px){
+@media screen and (min-width: 550px){
+
+    .school_header h1{
+        font-size: 1.6em;
+        text-align: left; 
+        line-height: 1.5;
+    }
+
+    .ags_page .school_header {
+        background-color: #444;
+        color: #fff;
+        padding: 5% 5% 0% 20%;
+        position: relative;
+    }
 
     .query{
         display: flex;
@@ -312,17 +338,66 @@ main .query_result h3{
     }
 
     .main_selector{
-        width: calc(50% - 20px);
-        margin: 5px 10px;
+        width: calc(50% - 5px);
+        margin: 5px;
+    }
+
+    .instructions{
+        font-size: 1em;
+    }
+
+    .box_1, .box_2{
+        margin-top: 10px;
+    }
+
+    .box_1, .box_3, .box_5, .box_7{
+        margin-left: 0;
+    }
+
+    .box_2, .box_4, .box_6, .box_8{
+        margin-right: 0;
     }
 
 }
 
 @media screen and (min-width: 900px){
 
-     .main_selector{
-        width: calc(33.33333333% - 20px);
-        margin: 5px 10px;
+    .ags_page .school_header {
+        background-color: #444;
+        color: #fff;
+        padding: 3% 5% 0% 190px;
+        position: relative;
+    }
+
+    .school_header img {
+        width: 80px;
+        position: absolute;
+        top: 30px;
+        left: 70px;
+    }
+
+    .school_header h1{
+        line-height: 2.5;
+    }
+
+    .breadcrumb{
+        margin-top: 50px;
+    }
+
+    .ags_page main{
+        padding: 10px 50px;
+    }
+
+    .box_1, .box_3, .box_6{
+        margin: 5px 5px 5px 0;
+    }
+
+    .box_2, .box_5, .box_8{
+        margin: 5px 0 5px 5px;
+    }
+
+    .box_4, .box_7{
+        margin: 5px;
     }
 
     .main_selector h2{
@@ -331,7 +406,12 @@ main .query_result h3{
     }
     
     .box_1, .box_2{
-        width: calc(50% - 20px);
+        width: calc(50% - 5px);
+        margin-top: 10px;
+    }
+
+    .box_3, .box_4, .box_5, .box_6, .box_7, .box_8{
+        width: calc(33.33333% - 7px)
     }
 
 }
