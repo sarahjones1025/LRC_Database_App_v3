@@ -73,11 +73,13 @@ $(this).closest('.main_selector').find('.result_list').toggle();
 
 $('#clearFilter').click(function(e) {
 		$('.checked').each(function() {
-			this.classList.toggle('checked');
+			$(this).removeClass('checked');
 	});
-
-	
-	
+		$('.result_list').each(function() {
+			if($(this).attr('style') === 'display: block;') {
+				$(this).attr('style', 'display: none;');
+			}
+		});
 });
 
 
