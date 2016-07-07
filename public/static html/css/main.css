@@ -15,6 +15,13 @@ input:focus, select:focus, textarea:focus, button:focus{
 
 /*****************************/
 
+label{
+    font-weight: 300;
+}
+
+a{
+    font-weight: 300;
+}
 
 /*Clearfix for handling floats*/
 
@@ -63,6 +70,13 @@ input:focus, select:focus, textarea:focus, button:focus{
     color: #444;
     letter-spacing: 0.05em;
     float: right;
+    background-color: transparent;
+    font-weight: 300;
+}
+
+.clear_filter:active{
+    background-color: #444;
+    color: #fff;
 }
 
 .breadcrumbs h3{
@@ -144,7 +158,7 @@ input{
     position: absolute;
     right: 0;
     bottom: 8px;
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;*/
     border: solid 1px #444;
     height: 15px;
     width: 15px;
@@ -173,9 +187,9 @@ input{
 
 .red_fill h2{
     color: #fff;
-}*/
+}
 
-/*.red_fill .toggle_button{
+.red_fill .toggle_button{
     color: #fff;
     height: 50px;
 }*/
@@ -187,7 +201,7 @@ input{
 .ags_page .school_header{
     background-color: #444;
     color: #fff;
-    padding: 10% 10% 1% 25%;
+    padding: 35px 10px 0 110px;
     position: relative;
 }
 
@@ -223,7 +237,6 @@ input{
 
 .school_header h1{
     font-size: 1.2em;
-    text-align: right;
     line-height: 1.5;
 }
 
@@ -231,36 +244,50 @@ input{
     -webkit-appearance: none;
     border: none;
     position: absolute;
-    top: 0;
-    right: 5px;
+    top: 16px;
+    right: 15px;
     text-decoration: none;
     color: #444;
     background: none;
-    width: 55px;
-    height: 47px;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/down_arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .button:focus{
     outline: none;
 }
-/*
-.query{
-    margin-top: 35px;
-}*/
 
-.label{
-    border-bottom: solid 1px #444;
-    margin: 50px 0px 50px 0px;
-    padding-bottom: 10px;
+.query_result{
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
 
-main .query_result h3{
-    font-size: .8em;
-    width: 25%;
+.label {
+    border-bottom: solid 1px #444;
+    margin: 50px 0px 50px 0px;
+    padding-bottom: 20px;
+    width: 300%;
+}
+
+main .query_result h3 {
+    font-size: 1em;
+    font-weight: 100;
+    width: 20%;
     float: left;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: left;
+}
+
+.lesson_results{
+    width: 300%;
+}
+
+#lesson_results{
+    padding: 0;
 }
 
 #lesson_results li{
@@ -327,7 +354,7 @@ main .query_result h3{
     .ags_page .school_header {
         background-color: #444;
         color: #fff;
-        padding: 5% 5% 0% 20%;
+        padding: 35px 5% 0% 120px;
         position: relative;
     }
 
@@ -365,14 +392,14 @@ main .query_result h3{
     .ags_page .school_header {
         background-color: #444;
         color: #fff;
-        padding: 3% 5% 0% 190px;
+        padding: 30px 0 0 180px;
         position: relative;
     }
 
     .school_header img {
         width: 80px;
         position: absolute;
-        top: 30px;
+        top: 25px;
         left: 70px;
     }
 
