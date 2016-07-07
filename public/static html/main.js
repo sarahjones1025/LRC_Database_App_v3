@@ -83,7 +83,10 @@ $('#clearFilter').click(function(e) {
 		});
 });
 
-
+$('input:checkbox').each(function() {
+if($(this).is( ":checked")){
+	console.log('ok');
+}});
 
 
 
