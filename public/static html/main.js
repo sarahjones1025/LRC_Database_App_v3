@@ -67,6 +67,19 @@ $(this).closest('.main_selector').find('.result_list').toggle();
 });
 
 
+// This function removes unchecks all checkboxes
+// when the "clear all filters" button is clicked
+
+
+$('#clearFilter').click(function(e) {
+		$('.checked').each(function() {
+			this.classList.toggle('checked');
+	});
+
+	
+	
+});
+
 
 
 
