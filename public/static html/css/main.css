@@ -131,7 +131,7 @@ a{
 }
 
 .main_selector ul{
-    display: none;
+   /* display: none;*/
     padding: 5%;
     position: absolute;
     background-color: #ebebeb;

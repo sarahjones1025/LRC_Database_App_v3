@@ -1,100 +1,43 @@
-var toggleButton  = document.querySelector( ".toggle_button" );
-var resultList    = document.querySelector( ".result_list" );
-var mainSelector  = document.querySelector( ".main_selector" );
-var cc1 		  = document.getElementById( "core_competency_1" );
-var cc2 		  = document.getElementById( "core_competency_2" );
-var cc3 		  = document.getElementById( "core_competency_3" );
-var cc4 		  = document.getElementById( "core_competency_4" );
-var container     = document.getElementById( "lesson_results");
-var newLi		  = document.createElement( "li" );
+var contents      = $( ".contents" );
+var toggleButton  = $( ".toggle_button" );
 
 
-// function to add styles to selected drop-down lists
-var expandList = function expandList(){
+//Clears all options (unchecks checkboxes)
+$('#clearFilter').click(function(e){
 
-	mainSelector.classList.toggle( "red_fill" );
-
-};
-
-
-toggleButton.addEventListener( "click", expandList );
-
-
-var addFields = function addFields(){
-
-	container.appendChild( newLi );
-	newLi.innerText = "List of lessons will appear here.";
-
-};
-
-
-var createList = function createList( e ){
-
-	e.classList.toggle( "checked" );
-
-	if(e.classList.contains( "checked" )){
-		addFields();
-	}
-
-	else{
-	 $('#lesson_results').empty();
-	}
-
-};
-
-
-// this is to demonstrate list items populating in the query result and is solely for demonstration
-cc1.addEventListener( "click", function() {
-	createList(cc1);
-} );
-
-cc2.addEventListener( "click", function() {
-	createList(cc2);
-} );
-
-cc3.addEventListener( "click", function() {
-	createList(cc3);
-} );
-
-cc4.addEventListener( "click", function() {
-	createList(cc4);
-} );
-
-
-// expands and hides ul which gives list of available options for each category
-$('.toggle_button').click(function () {
-$(this).closest('.main_selector').find('.result_list').toggle();
-});
-
-
-// This function removes unchecks all checkboxes
-// when the "clear all filters" button is clicked
-
-
-$('#clearFilter').click(function(e) {
-	$('input:checkbox').each(function() {
-			$(this).prop('checked', false);
-			$(this).removeClass('checked');
+	$('input:checkbox').each(function(){
+		$(this).prop('checked', false);
+		$(this).removeClass('checked');
 	});
-		$('.result_list').each(function() {
-			if($(this).attr('style') === 'display: block;') {
-				$(this).attr('style', 'display: none;');
-			}
-		});
+	
 });
 
-$('input:checkbox').each(function() {
-if($(this).is( ":checked")){
-	console.log('ok');
-}});
+//Expands and hides ul which gives list of available options
+toggleButton.on( "click", function( e ){
 
+    var selector = $( this ).data( "contents" );
+ 
+	contents.not(selector).hide();
 
+    $( selector ).fadeToggle( 100 );
 
+    if ( $( window ).height() < 600 ){
+		$( document.body ).scrollTop( $( selector ).offset().top - 130 );
+    }
 
+    e.preventDefault();
 
+} );
 
+//Collapses all (.contents) if mouseclicks anywhere on page except within (.query)
+$(document.body).on('click', function (e){
 
+	if (!$('.query').has(e.target).length > 0){
+		$('.contents').hide();
+	}
+})
 
+contents.hide();
 
 
 
