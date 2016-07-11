@@ -7,7 +7,6 @@ $('#clearFilter').click(function(e){
 
 	$('input:checkbox').each(function(){
 		$(this).prop('checked', false);
-		$(this).removeClass('checked');
 	});
 	
 });
@@ -29,15 +28,33 @@ toggleButton.on( "click", function( e ){
 
 } );
 
+contents.hide();
+
 //Collapses all (.contents) if mouseclicks anywhere on page except within (.query)
 $(document.body).on('click', function (e){
 
 	if (!$('.query').has(e.target).length > 0){
 		$('.contents').hide();
 	}
+
 })
 
-contents.hide();
+ $(document).ready(function(){
+    $("input:checkbox").click(function(){
+        if ($(this).is(':checked'))
+        {
+            $(".instructions").html("Refine your results: (#) Lessons found");
+        }
+        else
+        {
+            $(".instructions").html("Select a search criterion");
+        }
+    });
+});
+
+//Need to adjust the above function to include the reset option
+//currently the clear all criterion does not change the text back
+
 
 
 
