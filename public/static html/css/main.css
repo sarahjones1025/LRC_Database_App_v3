@@ -305,17 +305,17 @@ main .query_result h3 {
     left: 7px;
 }
 
-.landing_page header{
+.landing_page header {
     background-color: #0051a8;
     color: #fff;
-    padding: 10% 10% 1% 20%;
+    padding: 20px 15px 10px 120px;
     position: relative;
 }
 
-.landing_page header h1{
+.landing_page header h1 {
     font-size: 1.4em;
-    text-align: right;
-    line-height: 1.5;
+    text-align: left;
+    line-height: 1.2;
 }
 
 .landing_page main h1{
@@ -340,10 +340,66 @@ main .query_result h3 {
     text-decoration: none;
     text-align: left;
     padding: 15px 25px;
-    margin-bottom: 13px;
+    margin-bottom: 9px;
+    border: solid 2px #fff;
+}
+
+.main_nav a:hover{
+    background-color: #fff;
+    border: solid 2px #0051a8;
+    color: #0051a8;
 }
     
 @media screen and (min-width: 550px){
+
+    .landing_page header {
+        background-color: #0051a8;
+        color: #444;
+        padding: 55px 0 0 0;
+        position: relative;
+        margin: 40px 0px 75px 0px;
+    }
+
+    .landing_page header img {
+        width: 110px;
+        position: absolute;
+        top: -20px;
+        left: 10px;
+        z-index: 100;
+    }
+
+    .landing_page header h1 {
+        font-size: 1.7em;
+        text-align: left;
+        line-height: 1.2;
+        background-color: #fff;
+        padding: 0px 0px 20px 80px;
+        position: absolute;
+        top: -32px;
+        left: 60px;
+        width: 120px;
+        margin-bottom: 0;
+    }
+
+    .landing_page main {
+         padding: 0; 
+    }
+
+    .main_nav{
+        margin-left: 29%;
+    }
+
+    .main_nav a {
+        padding: 20px 70px;
+        font-size: 1.2em;
+    }
+
+    .landing_page main h1 {
+        margin: 30px 0px;
+        font-size: 1.7em;
+        font-weight: 100;
+        text-align: center;
+    }
 
     .lesson_results, .label{
         width: 100%;
@@ -408,6 +464,17 @@ main .query_result h3 {
         position: relative;
     }
 
+    .main_nav {
+        margin-left: 260px;
+    }
+
+    .landing_page main h1 {
+        margin: 30px 0px 30px 140px;
+        font-size: 2.5em;
+        font-weight: 100;
+        text-align: left;
+    }
+
     .school_header img {
         width: 80px;
         position: absolute;
@@ -455,8 +522,54 @@ main .query_result h3 {
 
 }
 
+@media screen and (min-width: 1080px){
 
+    .main_nav a {
+        padding: 23px 90px;
+        font-size: 1.5em;
+    }
 
+    .landing_page header {
+        background-color: #0051a8;
+        color: #444;
+        padding: 70px 0 0 0;
+        position: relative;
+        margin: 40px 0px 75px 0px;
+    }
+
+    .landing_page header img {
+        width: 125px;
+        position: absolute;
+        top: -18px;
+        left: 50px;
+    }
+
+    .landing_page header h1 {
+        font-size: 2em;
+        text-align: left;
+        line-height: 1.2;
+        background-color: #fff;
+        padding: 0px 30px 20px 75px;
+        position: absolute;
+        top: -32px;
+        left: 115px;
+        width: 120px;
+        margin-bottom: 0;
+    }
+
+    .landing_page main{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .landing_page main h1 {
+        margin: 35px 0px 35px 0;
+        font-size: 3em;
+        font-weight: 100;
+        text-align: right;
+    }
+
+}
 
 
 
