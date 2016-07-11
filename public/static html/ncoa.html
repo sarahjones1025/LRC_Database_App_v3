@@ -11,11 +11,13 @@
 		<a href="ncoa.html"><img src="img/ncoa.png"></a>
 		<h1>Noncomissioned Officer's Academy Database</h1>
 	</header>
-		<main>	
-		<h3 class="instructions">Select a search criterion</h3>
-		<button id="clearFilter" class="clear_filter">clear all filters</button> <!-- this will un-check all options --> 
+	<main>	
+		<div class="breadcrumb clearfix">
+			<h3 class="instructions">Select a search criterion</h3>
+			<button id="clearFilter" class="clear_filter">clear all filters</button> <!-- this will un-check all options --> 
+		</div>
 		<div class="query">
-			<div class="main_selector box_1"> 
+			<div class="main_selector box_1"> 	
 				<h2>Course</h2>
 				<button class="toggle_button"></button> <!-- expands and hides ul which gives list of available options -->
 				<ul class="result_list"> <!-- this ul is hidded until toggle_button is clicked -->
@@ -352,13 +354,14 @@
 			</div>
 		</div>
 		<div class="query_result"> <!-- this is where the "results" will appear as determined by the queries selected above -->
-			<div class="label clearfix">
+			<div class="label">
 				<h3>Lesson</h3>
+				<h3>Items</h3>
 				<h3>Course</h3>
-				<h3>Supporting Individual Tasks</h3>
+				<h3>Individual Tasks</h3>
 				<h3>Collective Task</h3>
 			</div>
-			<div>
+			<div class="lesson_results">
 				<ul id="lesson_results"></ul> <!-- empty ul where lis will populate when queried -->
 			</div>
 		</div>

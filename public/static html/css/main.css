@@ -41,13 +41,7 @@ a{
 
 /*****************************/
 
-
-
-.ags_page main{
-    padding: 10px;
-}
-
-.fms_page main{
+.ags_page main, .fms_page main, .ncoa_page main{
     padding: 10px;
 }
 
@@ -196,27 +190,22 @@ input{
 
 .school_header{
     height: 95px;
+    background-color: #444;
+    color: #fff;
+    position: relative;
 }
 
 .ags_page .school_header{
-    background-color: #444;
-    color: #fff;
     padding: 35px 10px 0 110px;
-    position: relative;
+   
 }
 
 .fms_page .school_header{
-    background-color: #444;
-    color: #fff;
-    padding: 10% 10px 1% 20%;
-    position: relative;
+    padding: 35px 10px 0 110px;
 }
 
 .ncoa_page .school_header{
-    background-color: #444;
-    color: #fff;
-    padding: 10% 10px 1% 20%;
-    position: relative;
+   padding: 35px 10px 0 110px;
 }
 
 .school_header a:first-child{
@@ -233,6 +222,16 @@ input{
     position: absolute;
     top: 30px;
     left: 20px;
+}
+
+.fms_page img{
+    width: 80px;
+    top: 35px;
+}
+
+.ncoa_page img{
+    width: 65px;
+    left: 25px;
 }
 
 .school_header h1{
@@ -319,7 +318,7 @@ main .query_result h3 {
 }
 
 .landing_page main h1{
-    margin: 25px 0px;
+    margin: 35px 0 25px 0px;
     font-size: 1.3em;
     font-weight: 100;
     text-align: center;
@@ -411,7 +410,7 @@ main .query_result h3 {
         line-height: 1.5;
     }
 
-    .ags_page .school_header {
+    .ags_page .school_header, .fms_page .school_header, .ncoa_page .school_header {
         background-color: #444;
         color: #fff;
         padding: 35px 5% 0% 120px;
@@ -457,7 +456,7 @@ main .query_result h3 {
 
 @media screen and (min-width: 900px){
 
-    .ags_page .school_header {
+    .ags_page .school_header, .fms_page .school_header, .ncoa_page .school_header {
         background-color: #444;
         color: #fff;
         padding: 30px 0 0 180px;
@@ -468,18 +467,28 @@ main .query_result h3 {
         margin-left: 260px;
     }
 
-    .landing_page main h1 {
+    .landing_page main h1{
         margin: 30px 0px 30px 140px;
         font-size: 2.5em;
         font-weight: 100;
         text-align: left;
     }
 
-    .school_header img {
+    .school_header img{
         width: 80px;
         position: absolute;
         top: 25px;
         left: 70px;
+    }
+
+    .fms_page img{
+        width: 100px;
+        top: 45px;
+        left: 65px;
+    }
+
+    .ncoa_page img{
+        left: 75px;
     }
 
     .school_header h1{
@@ -490,7 +499,7 @@ main .query_result h3 {
         margin-top: 50px;
     }
 
-    .ags_page main{
+    .ags_page main, .ncoa_page main, .fms_page main{
         padding: 10px 50px;
     }
 
