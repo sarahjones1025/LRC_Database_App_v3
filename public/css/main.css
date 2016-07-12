@@ -1,0 +1,591 @@
+/*font-family Josefin Sans*/
+/*font-family Playfair Display*/ 
+/*these are example fonts, not final choices!!! */
+
+body{
+    font-family: Josefin Sans;
+    color: #444;
+}
+
+/*Removes "focus" highlight*/
+
+input:focus, select:focus, textarea:focus, button:focus{ 
+    outline: none; 
+}
+
+/*****************************/
+
+label{
+    font-weight: 300;
+}
+
+a{
+    font-weight: 300;
+}
+
+/*Clearfix for handling floats*/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
+/*****************************/
+
+.ags_page main, .fms_page main, .ncoa_page main{
+    padding: 10px;
+}
+
+.breadcrumb{
+    margin-top: 20px;
+}
+
+.instructions{
+    font-size: .8em;
+    font-weight: 100;
+    margin: 5px 0 0 0;
+    float: left;
+}
+
+.clear_filter{
+    font-size: .6em;
+    padding: 5px 20px;
+    text-decoration: none;
+    border: solid 1px #444;
+    color: #444;
+    letter-spacing: 0.05em;
+    float: right;
+    background-color: transparent;
+    font-weight: 300;
+}
+
+.clear_filter:active{
+    background-color: #444;
+    color: #fff;
+}
+
+.breadcrumbs h3{
+
+}
+
+.breadcrumbs button{
+    float: right;
+}
+
+/*.main_selector .show{
+    display: block;
+}*/
+
+.box_1{
+    z-index: 100;
+}
+
+.box_2{
+    z-index: 90;
+}
+
+.box_3{
+    z-index: 80;
+}
+
+.box_4{
+    z-index: 70;
+}
+
+.box_5{
+    z-index: 60;
+}
+
+.box_6{
+    z-index: 50;
+}
+
+.box_7{
+    z-index: 40;
+}
+
+.box_8{
+    z-index: 30;
+}
+
+.main_selector{
+   /* background-image: url(../img/selection_bg.jpg);
+    background-repeat: no-repeat;*/
+    background-color: #ebebeb;
+    position: relative;
+    background-size: cover;
+    margin: 10px 0px    ;
+}
+
+.main_selector .show h2{
+    color: #fff;
+}
+
+.main_selector ul{
+    padding: 5%;
+    position: absolute;
+    background-color: #ebebeb;
+    width: 90%;
+    margin: 0;
+}
+
+.main_selector li{
+    color: #444;
+    list-style: none;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+
+/*checkboxes*/
+input{
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    /*-webkit-appearance: none;*/
+    border: solid 1px #444;
+    height: 15px;
+    width: 15px;
+    background-size: cover;
+}
+
+.checked{
+    background-image: url(../img/checked.png);
+}
+
+
+.main_selector h2{
+    color: #444;
+    font-weight: 300;
+    padding: 15px;
+    text-align: left;
+    font-size: 1em;
+    margin: 0 0 0 75px;
+}
+
+/*.red_fill{
+    background-image: url(../img/selection_bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.red_fill h2{
+    color: #fff;
+}
+
+.red_fill .toggle_button{
+    color: #fff;
+    height: 50px;
+}*/
+
+.school_header{
+    height: 95px;
+    background-color: #444;
+    color: #fff;
+    position: relative;
+}
+
+.ags_page .school_header{
+    padding: 35px 10px 0 110px;
+   
+}
+
+.fms_page .school_header{
+    padding: 35px 10px 0 110px;
+}
+
+.ncoa_page .school_header{
+   padding: 35px 10px 0 110px;
+}
+
+.school_header a:first-child{
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: .7em;
+}
+
+.school_header img{
+    width: 70px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+.fms_page img{
+    width: 80px;
+    top: 35px;
+}
+
+.ncoa_page img{
+    width: 65px;
+    left: 25px;
+}
+
+.school_header h1{
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.toggle_button{
+    -webkit-appearance: none;
+    border: none;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    text-decoration: none;
+    color: #444;
+    background: none;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/down_arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.button:focus{
+    outline: none;
+}
+
+.query_result{
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.label {
+    border-bottom: solid 1px #444;
+    margin: 50px 0px 50px 0px;
+    padding-bottom: 20px;
+    width: 300%;
+}
+
+main .query_result h3 {
+    font-size: 1em;
+    font-weight: 100;
+    width: 20%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.lesson_results{
+    width: 300%;
+}
+
+#lesson_results{
+    padding: 0;
+}
+
+#lesson_results li{
+    list-style: none;
+}
+
+.landing_page main{
+    padding: 10px;
+}
+
+.landing_page header img{
+    width: 90px;
+    position: absolute;
+    top: 20px;
+    left: 7px;
+}
+
+.landing_page header {
+    background-color: #0051a8;
+    color: #fff;
+    padding: 20px 15px 10px 120px;
+    position: relative;
+}
+
+.landing_page header h1 {
+    font-size: 1.4em;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.landing_page main h1{
+    margin: 35px 0 25px 0px;
+    font-size: 1.3em;
+    font-weight: 100;
+    text-align: center;
+}
+
+.main_nav ul{
+    padding-left: 0;
+}
+
+.main_nav li{
+    list-style: none;
+}
+
+.main_nav a{
+    display: block;
+    background-color: #0051a8;
+    color: #fff;
+    text-decoration: none;
+    text-align: left;
+    padding: 15px 25px;
+    margin-bottom: 9px;
+    border: solid 2px #fff;
+}
+
+.main_nav a:hover{
+    background-color: #fff;
+    border: solid 2px #0051a8;
+    color: #0051a8;
+}
+    
+@media screen and (min-width: 550px){
+
+    .landing_page header {
+        background-color: #0051a8;
+        color: #444;
+        padding: 55px 0 0 0;
+        position: relative;
+        margin: 40px 0px 75px 0px;
+    }
+
+    .landing_page header img {
+        width: 110px;
+        position: absolute;
+        top: -20px;
+        left: 10px;
+        z-index: 100;
+    }
+
+    .landing_page header h1 {
+        font-size: 1.7em;
+        text-align: left;
+        line-height: 1.2;
+        background-color: #fff;
+        padding: 0px 0px 20px 80px;
+        position: absolute;
+        top: -32px;
+        left: 60px;
+        width: 120px;
+        margin-bottom: 0;
+    }
+
+    .landing_page main {
+         padding: 0; 
+    }
+
+    .main_nav{
+        margin-left: 29%;
+    }
+
+    .main_nav a {
+        padding: 20px 70px;
+        font-size: 1.2em;
+    }
+
+    .landing_page main h1 {
+        margin: 30px 0px;
+        font-size: 1.7em;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    .lesson_results, .label{
+        width: 100%;
+    }
+
+    .school_header h1{
+        font-size: 1.6em;
+        text-align: left; 
+        line-height: 1.5;
+    }
+
+    .ags_page .school_header, .fms_page .school_header, .ncoa_page .school_header {
+        background-color: #444;
+        color: #fff;
+        padding: 35px 5% 0% 120px;
+        position: relative;
+    }
+
+    .query{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+    }
+
+    .main_selector{
+        width: calc(50% - 5px);
+        margin: 5px;
+    }
+
+    .instructions{
+        font-size: 1em;
+    }
+
+    .box_1, .box_2{
+        margin-top: 10px;
+    }
+
+    .box_1, .box_3, .box_5, .box_7{
+        margin-left: 0;
+    }
+
+    .box_2, .box_4, .box_6, .box_8{
+        margin-right: 0;
+    }
+
+    .label {
+        padding-bottom: 35px;
+    }
+
+    main .query_result h3{
+        width: 15%;
+        margin: 0 5% 0 0;
+    }
+}
+
+@media screen and (min-width: 900px){
+
+    .ags_page .school_header, .fms_page .school_header, .ncoa_page .school_header {
+        background-color: #444;
+        color: #fff;
+        padding: 30px 0 0 180px;
+        position: relative;
+    }
+
+    .main_nav {
+        margin-left: 260px;
+    }
+
+    .landing_page main h1{
+        margin: 30px 0px 30px 140px;
+        font-size: 2.5em;
+        font-weight: 100;
+        text-align: left;
+    }
+
+    .school_header img{
+        width: 80px;
+        position: absolute;
+        top: 25px;
+        left: 70px;
+    }
+
+    .fms_page img{
+        width: 100px;
+        top: 45px;
+        left: 65px;
+    }
+
+    .ncoa_page img{
+        left: 75px;
+    }
+
+    .school_header h1{
+        line-height: 2.5;
+    }
+
+    .breadcrumb{
+        margin-top: 50px;
+    }
+
+    .ags_page main, .ncoa_page main, .fms_page main{
+        padding: 10px 50px;
+    }
+
+    .box_1, .box_3, .box_6{
+        margin: 5px 5px 5px 0;
+    }
+
+    .box_2, .box_5, .box_8{
+        margin: 5px 0 5px 5px;
+    }
+
+    .box_4, .box_7{
+        margin: 5px;
+    }
+
+    .main_selector h2{
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    .box_1, .box_2{
+        width: calc(50% - 5px);
+        margin-top: 10px;
+    }
+
+    .box_3, .box_4, .box_5, .box_6, .box_7, .box_8{
+        width: calc(33.33333% - 7px)
+    }
+
+}
+
+@media screen and (min-width: 1080px){
+
+    .main_nav a {
+        padding: 23px 90px;
+        font-size: 1.5em;
+    }
+
+    .landing_page header {
+        background-color: #0051a8;
+        color: #444;
+        padding: 70px 0 0 0;
+        position: relative;
+        margin: 40px 0px 75px 0px;
+    }
+
+    .landing_page header img {
+        width: 125px;
+        position: absolute;
+        top: -18px;
+        left: 50px;
+    }
+
+    .landing_page header h1 {
+        font-size: 2em;
+        text-align: left;
+        line-height: 1.2;
+        background-color: #fff;
+        padding: 0px 30px 20px 75px;
+        position: absolute;
+        top: -32px;
+        left: 115px;
+        width: 120px;
+        margin-bottom: 0;
+    }
+
+    .landing_page main{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .landing_page main h1 {
+        margin: 35px 0px 35px 0;
+        font-size: 3em;
+        font-weight: 100;
+        text-align: right;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
