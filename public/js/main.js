@@ -1,5 +1,6 @@
 var contents      = $( ".contents" );
 var toggleButton  = $( ".toggle_button" );
+var lessonResults = $(".lesson_results");
 
 //Clears all options (unchecks checkboxes)
 $('#clearFilter').click(function(e){
@@ -38,11 +39,14 @@ $(document.body).on('click', function (e){
 
 });
 
+
+
  $(document).ready(function(){
     $("input:checkbox").click(function(){
         if ($(this).is(':checked'))
         {
             $(".instructions").html("Refine your results: (#) Lessons found");
+            lessonResults.append("<li>blahblablah</li>");
         }
         else
         {
@@ -53,6 +57,23 @@ $(document.body).on('click', function (e){
 
 //Need to adjust the above function to include the reset option
 //currently the clear all criterion does not change the text back
+
+
+var x = new XMLHttpRequest();
+x.open('GET','data.js', true);
+x.onreadystatechange = function(){
+    if(x.readyState == 4){
+        console.log('boom');
+        var data = JSON.parse(x.responseText);
+        callback(data[3]['Core Competencies (Name)']);
+    }
+};
+x.send();
+
+function callback(resp){
+    console.log(resp);
+}
+
 
 
 
