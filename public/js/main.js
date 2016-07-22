@@ -54,6 +54,16 @@ $(document.body).on('click', function (e){
 //Need to adjust the above function to include the reset option
 //currently the clear all criterion does not change the text back
 
+function createServer (opts) {
+  var _bodyParser = bodyParser(opts)
+
+  return http.createServer(function (req, res) {
+    _bodyParser(req, res, function (err) {
+      res.statusCode = err ? (err.status || 500) : 200
+      res.end(err ? err.message : JSON.stringify(req.body))
+    })
+  })
+}
 
 
 
