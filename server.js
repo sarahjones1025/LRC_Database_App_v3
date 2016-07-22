@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + 'data.js'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
@@ -24,8 +25,8 @@ app.engine('html', require('ejs').renderFile);
         res.render('ncoa.html');
     });
 
-     app.get('/data.json',function(req,res) {
-        res.send('data.json');
+     app.get('/data.js',function(req,res) {
+        res.send('data.js');
      });
 
 var server = app.listen(3000, function() {
