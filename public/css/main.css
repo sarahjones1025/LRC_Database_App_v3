@@ -168,24 +168,9 @@ input{
     font-weight: 300;
     padding: 15px;
     text-align: left;
-    font-size: 1em;
+    font-size: 1.1em;
     margin: 0 0 0 75px;
 }
-
-/*.red_fill{
-    background-image: url(../img/selection_bg2.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.red_fill h2{
-    color: #fff;
-}
-
-.red_fill .toggle_button{
-    color: #fff;
-    height: 50px;
-}*/
 
 .school_header{
     height: 95px;
@@ -194,9 +179,21 @@ input{
     position: relative;
 }
 
+
 .ags_page .school_header{
     padding: 35px 10px 0 110px;
    
+}
+
+.ags_page .main_selector{
+    background-image: url(../img/ags_bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ags_page .active{
+    background-image: url(../img/ags_bg2.jpg);
+    background-size: cover;
 }
 
 .fms_page .school_header{
@@ -228,9 +225,35 @@ input{
     top: 35px;
 }
 
+.fms_page .main_selector{
+    background-image: url(../img/fms_bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fms_page .active{
+    background-image: url(../img/fms_bg2.jpg);
+    background-size: cover;
+}
+
 .ncoa_page img{
     width: 65px;
     left: 25px;
+}
+
+.ncoa_page .main_selector{
+    background-image: url(../img/ncoa_bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ncoa_page .active{
+    background-image: url(../img/ncoa_bg2.jpg);
+    background-size: cover;
+}
+
+.active h2{
+    color: #fff;
 }
 
 .school_header h1{
@@ -255,6 +278,10 @@ input{
     background-repeat: no-repeat;
 }
 
+.active .toggle_button{
+    background-image: url(../img/up_arrow.png);
+}
+
 .button:focus{
     outline: none;
 }
@@ -272,7 +299,7 @@ input{
 }
 
 main .query_result h3 {
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 100;
     width: 20%;
     float: left;
@@ -354,7 +381,12 @@ main .query_result h3 {
 }
 
 .lesson_list ul{
-    padding-left: 0;
+    padding: 10px 0 0 0;
+
+}
+
+.lesson_list ul:hover{
+    background-color: #eee;
 }
 
 .lesson_list li{
@@ -364,6 +396,7 @@ main .query_result h3 {
     font-family: sans-serif;
     vertical-align: top;
 }
+
     
 @media screen and (min-width: 550px){
 

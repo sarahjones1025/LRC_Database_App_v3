@@ -15,6 +15,12 @@ $('#clearFilter').click(function(e){
 //Expands and hides ul which gives list of available options
 toggleButton.on( "click", function( e ){
 
+    var padres = $( this ).parent();
+
+    padres.toggleClass('active');
+
+    $('.main_selector').not(padres).removeClass('active');
+
     var selector = $( this ).data( "contents" );
  
 	contents.not(selector).hide();
@@ -32,10 +38,11 @@ toggleButton.on( "click", function( e ){
 contents.hide();
 
 //Collapses all (.contents) if mouseclicks anywhere on page except within (.query)
-$(document.body).on('click', function (e){
+$(document.body).on('click', function ( e ){
 
 	if (!$('.query').has(e.target).length > 0){
 		$('.contents').hide();
+        $('.main_selector').removeClass('active');
 	}
 
 });
