@@ -139,7 +139,8 @@ function populateResults (course) {
 
     // $("<li/>").appendTo(lessonList).html(obj.LessonName); 
 
-    $("<li/>").appendTo(testUL).html(obj.LessonName);  
+    $("<li/>").appendTo(testUL).html(obj.LessonName);
+    $("<li/>").appendTo(testUL).html('# of items');  
     $("<li/>").appendTo(testUL).html(obj.Course);  
     $("<li/>").appendTo(testUL).html(obj.IndividualTask);  
     $("<li/>").appendTo(testUL).html(obj.CollectiveTask);  

@@ -349,12 +349,20 @@ main .query_result h3 {
     color: #0051a8;
 }
 
+.lesson_list{
+    width: 300%;
+}
+
 .lesson_list ul{
     padding-left: 0;
 }
 
 .lesson_list li{
-    margin: 0 0 10px 0;
+    margin: 0 5% 10px 0;
+    display: inline-block;
+    width: 15%;
+    font-family: sans-serif;
+    vertical-align: top;
 }
     
 @media screen and (min-width: 550px){
@@ -408,7 +416,7 @@ main .query_result h3 {
         text-align: center;
     }
 
-    .lesson_results, .label{
+    .lesson_results, .label, .lesson_list{
         width: 100%;
     }
 
