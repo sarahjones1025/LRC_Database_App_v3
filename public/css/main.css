@@ -348,6 +348,14 @@ main .query_result h3 {
     border: solid 2px #0051a8;
     color: #0051a8;
 }
+
+.lesson_list ul{
+    padding-left: 0;
+}
+
+.lesson_list li{
+    margin: 0 0 10px 0;
+}
     
 @media screen and (min-width: 550px){
 
