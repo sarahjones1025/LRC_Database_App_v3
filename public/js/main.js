@@ -9,6 +9,8 @@ $('#clearFilter').click(function(e){
 	$('input:checkbox').each(function(){
 		$(this).prop('checked', false);
 	});
+
+    lessonList.empty();
 	
 });
 
@@ -52,46 +54,21 @@ $(document.body).on('click', function ( e ){
     $("input:checkbox").click(function(){
         if ($(this).is(':checked'))
         {
+            console.log($(this));
+            console.log($(this).closest('div'));
+            var criterion = $(this).parent().text();
+            console.log(criterion);
+            populateResults(criterion);
             $(".instructions").html("Refine your results: (#) Lessons found");
-            var course = $(this).parent().text();
-            populateResults(course);
+
 
         }
         else
-        {
+        {  
             $(".instructions").html("Select a search criterion");
         }
     });
 });
-
-//Need to adjust the above function to include the reset option
-//currently the clear all criterion does not change the text back
-
-function createServer (opts) {
-  var _bodyParser = bodyParser(opts)
-
-  return http.createServer(function (req, res) {
-    _bodyParser(req, res, function (err) {
-      res.statusCode = err ? (err.status || 500) : 200
-      res.end(err ? err.message : JSON.stringify(req.body))
-    })
-  })
-}
-
-
-
-
-
-// var x = new XMLHttpRequest();
-// x.open('GET','data.js', true);
-// x.onreadystatechange = function(){
-//     if(x.readyState == 4){
-//         var dataArray = [];
-//         var data = JSON.parse(x.responseText);
-//         SaveDataToLocalStorage(x.responseText);
-//     }
-// };
-// x.send();
 
 
 var x = new XMLHttpRequest();
@@ -102,9 +79,6 @@ x.onreadystatechange = function(){
     }
 };
 x.send();
-
-
-
 
 
 
@@ -128,15 +102,15 @@ function SaveDataToLocalStorage(data)
 // this function loops over the localStorage and populates list items when
 // you click on a checkbox:
 
-function populateResults (course) {
-
+function populateResults (criterion) {
     // parse the localStorage data:
     var data = JSON.parse(localStorage.session);
     // loop over all the data:
     data.forEach(function (obj) {
-    // if the current objects Course property is equal to
-    // the course we passed in to populate Results:
-      if (obj.Course === course) {
+
+        for (var prop in obj) {
+
+        if (obj[prop] === criterion) {
 
     var testUL = $("<ul></ul").prop('class', 'testLiClass');
 
@@ -152,46 +126,16 @@ function populateResults (course) {
     $("<li/>").appendTo(testUL).html(obj.IndividualTask);  
     $("<li/>").appendTo(testUL).html(obj.CollectiveTask);  
 
-    lessonList.append(testUL);
-
-        } 
+    lessonList.append(testUL);        
+            }
+        }
     });
+
+
 }
+    
 
 
-
-
-
-
-
-// function setStorgage (resp) {
-//     var data = JSON.parse(resp);
-//     data.forEach(function(obj) {
-//         window.localStorage.setItem('Course', obj.Course);
-//     });
-// }
-
-// function callback(resp){
-//     console.log(resp);
-// }
-
-
-
-// new request 
-
-// $.ajax({
-//     method: "GET",
-//     url: 'data.js',
-//     dataType: 'JSONp',
-//     success: function(data, status) {
-//         $.each(data, function(key, value){
-//             conosle.log(data);             
-//         });
-//     },
-//     error: function() {
-//         console.log('we got a problem');
-//     }
-// });
 
 
 
