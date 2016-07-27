@@ -54,10 +54,7 @@ $(document.body).on('click', function ( e ){
     $("input:checkbox").click(function(){
         if ($(this).is(':checked'))
         {
-            console.log($(this));
-            console.log($(this).closest('div'));
             var criterion = $(this).parent().text();
-            console.log(criterion);
             populateResults(criterion);
             $(".instructions").html("Refine your results: (#) Lessons found");
 
@@ -70,7 +67,7 @@ $(document.body).on('click', function ( e ){
     });
 });
 
-
+// Request for data and save it to local storage :
 var x = new XMLHttpRequest();
 x.open('GET','data.js', true);
 x.onreadystatechange = function(){
@@ -103,6 +100,7 @@ function SaveDataToLocalStorage(data)
 // you click on a checkbox:
 
 function populateResults (criterion) {
+
     // parse the localStorage data:
     var data = JSON.parse(localStorage.session);
     // loop over all the data:
@@ -112,32 +110,49 @@ function populateResults (criterion) {
 
         if (obj[prop] === criterion) {
 
-    var testUL = $("<ul></ul").prop('class', 'testLiClass');
+    // Create an unordered list 
+    var resultsUL = document.createElement('ul');
+
+    resultsUL.setAttribute('class', 'resultsUL');
+
 
     // Create a list item
-    // Set list items html equal to the obj's LessonName:
-    // Append the liste item to the lessonResults ul:
+    // Set list items html equal to the obj's LessonName, etc.:
+    // Append the list item to the resultsUL ul:
+    
+    $("<li/>").appendTo(resultsUL).html(obj.LessonName);
+    $("<li/>").appendTo(resultsUL).html('# of items');  
+    $("<li/>").appendTo(resultsUL).html(obj.Course);  
+    $("<li/>").appendTo(resultsUL).html(obj.IndividualTask);  
+    $("<li/>").appendTo(resultsUL).html(obj.CollectiveTask);  
 
-    // $("<li/>").appendTo(lessonList).html(obj.LessonName); 
+    lessonList.append(resultsUL);  
 
-    $("<li/>").appendTo(testUL).html(obj.LessonName);
-    $("<li/>").appendTo(testUL).html('# of items');  
-    $("<li/>").appendTo(testUL).html(obj.Course);  
-    $("<li/>").appendTo(testUL).html(obj.IndividualTask);  
-    $("<li/>").appendTo(testUL).html(obj.CollectiveTask);  
-
-    lessonList.append(testUL);        
             }
         }
     });
 
+// Add and event listener to each UL, when clicked, it navigates to 
+// the lesson page
+// !! Still working on sending it the lesson name I want it to render for !!
+
+  $('.resultsUL').each(function () {
+    this.addEventListener('click', function (e) {
+
+        var x = new XMLHttpRequest();
+        x.open('GET','lesson.html', true);
+        x.onreadystatechange = function(){
+            if(x.readyState == 4){
+        window.location = '/lesson.html';
+    }
+};
+x.send();
+    });
+});
 
 }
     
 
-
-
-
-
+// The following function will take you to an
 
 
