@@ -20,7 +20,7 @@ label{
 }
 
 a{
-    font-weight: 300;
+    font-weight: 600;
 }
 
 /*Clearfix for handling floats*/
@@ -50,7 +50,7 @@ a{
 }
 
 .instructions{
-    font-size: .8em;
+    font-size: 1em;
     font-weight: 100;
     margin: 5px 0 0 0;
     float: left;
@@ -143,12 +143,18 @@ a{
     list-style: none;
     margin-bottom: 15px;
     position: relative;
+    border-bottom: solid 1px rgba(0 ,0 ,0, 0.05);
+    padding-bottom: 10px;
+}
+
+.main_selector li:last-child{
+    border: none;
 }
 
 
 /*checkboxes*/
 input{
-    position: absolute;
+ /*   position: absolute;*/
     right: 0;
     bottom: 2px;
     /*-webkit-appearance: none;*/
@@ -300,7 +306,7 @@ input{
 
 main .query_result h3 {
     font-size: 1.1em;
-    font-weight: 100;
+    font-weight: 600;
     width: 20%;
     float: left;
     margin: 0;
