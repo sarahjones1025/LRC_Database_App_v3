@@ -18,6 +18,7 @@ input:focus, select:focus, textarea:focus, button:focus{
 
 label{
     font-weight: 300;
+    flex-basis: 80%;
 }
 
 a{
@@ -132,24 +133,27 @@ a{
 }
 
 .main_selector ul{
-    padding: 5%;
-    position: absolute;
+    padding: 0;
     background-color: #ebebeb;
-    width: 90%;
     margin: 0;
 }
 
 .main_selector li{
     color: #444;
     list-style: none;
-    margin-bottom: 15px;
     position: relative;
     border-bottom: solid 1px rgba(0 ,0 ,0, 0.05);
-    padding-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .main_selector li:last-child{
     border: none;
+}
+
+.main_selector li:hover{
+    background-color: rgba(0,0,0,0.05);
 }
 
 
@@ -292,21 +296,19 @@ input[type="checkbox"]{
     overflow-x: scroll;
 }
 
-.label {
+.label{
     border-bottom: solid 1px #444;
-    margin: 50px 0px 50px 0px;
+    margin: 50px 0px 30px 0px;
     padding-bottom: 20px;
-    width: 300%;
+    width: 200%;
+    display: flex;
+    justify-content: space-between;
 }
 
 main .query_result h3 {
     font-size: 1em;
     font-weight: 600;
     width: 20%;
-    float: left;
-    margin: 0;
-    padding: 0;
-    text-align: left;
 }
 
 .lesson_results{
@@ -380,7 +382,9 @@ main .query_result h3 {
 }
 
 .lesson_list{
-    width: 300%;
+    width: 200%;
+    display: flex;
+    flex-direction: column;
 }
 
 .lesson_list ul{
@@ -392,10 +396,18 @@ main .query_result h3 {
     background-color: #eee;
 }
 
-.lesson_list li{
+/*.lesson_list li{
     margin: 0 5% 10px 0;
     display: inline-block;
     width: 15%;
+    font-family: sans-serif;
+    vertical-align: top;
+}*/
+
+.lesson_list li {
+    /* margin: 0 5% 10px 0; */
+    display: inline-block;
+    width: 20%;
     font-family: sans-serif;
     vertical-align: top;
 }
@@ -496,9 +508,9 @@ main .query_result h3 {
         margin-right: 0;
     }
 
-    .label {
+    /*.label {
         padding-bottom: 35px;
-    }
+    }*/
 
     main .query_result h3{
         width: 15%;
