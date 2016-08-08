@@ -3,9 +3,6 @@ var toggleButton  = $('.toggle_button');
 var lessonResults = $('.lesson_results');
 var lessonList    = $('.lesson_list');
 
-var resultsUL     = document.createElement('ul');
-    resultsUL.setAttribute('class', 'resultsUL');
-
 //Expands and hides ul which gives list of available options
 toggleButton.on( "click", function( e ){
     var padres = $( this ).parent();
@@ -35,8 +32,6 @@ $(document.body).on('click', function ( e ){
 $(document).ready(function(){
     $("input:checkbox").click(function(){
         if ($(this).is(':checked')){
-            var criterion = $(this).parent().text();
-            populateResults(criterion);
             $(".instructions").html("Refine your results: (#) Lessons found");
         }
         else{  
@@ -84,7 +79,16 @@ $('.resultsUL').each(function(){
 
 // Creating arrays for each object to be tested against based on checkbox clicks
 $(document).ready(function(){
+    // Parse the localStorage data:
+    var data = JSON.parse(localStorage.session); 
+    //Create an array to store results
+    
     $('input:checkbox').click(function(){
+        lessonList.empty();
+        if ($(this).is(':checked')){
+            var criterion = $(this).parent().text();
+        }
+        console.log(criterion);
         var courseArray         = [];
         var coreCompetencyArray = [];
         var wtspArray           = [];
@@ -93,6 +97,8 @@ $(document).ready(function(){
         var skillArray          = [];
         var subkeyArray         = [];
         var echelonArray        = [];
+        var bigResults          = [];
+
         $('input.courseSelectBox:checked').each(function(){
             if ( courseArray.indexOf($(this).parent().text()) === -1 ) {
                 courseArray.push($(this).parent().text());
@@ -141,43 +147,47 @@ $(document).ready(function(){
         console.log(skillArray);
         console.log(subkeyArray);
         console.log(echelonArray);
+
+        // console.log(criterion.obj.Course);
+        // Loop over all the data:
+        data.forEach(function (obj) {
+            for (var prop in obj) {
+                if ((obj[prop] === criterion) &&
+                  ( 
+                       ((courseArray.length         === 0) || (courseArray.indexOf(obj.Course >= 0)))
+                    && ((coreCompetencyArray.length === 0) || (coreCompetencyArray.indexOf(obj.CoreCompetencies >=0)))
+                    && ((wtspArray.length           === 0) || (wtspArray.indexOf(obj.WTSP >=0)))
+                    && ((indTaskArray.length        === 0) || (indTaskArray.indexOf(obj.IndividualTask >=0)))
+                    && ((colTaskArray.length        === 0) || (colTaskArray.indexOf(obj.CollectiveTask >=0)))
+                    && ((skillArray.length          === 0) || (skillArray.indexOf(obj.SkillLevel >=0)))
+                    && ((subkeyArray.length         === 0) || (subkeyArray.indexOf(obj.SubkeyFunction >=0)))
+                    && ((echelonArray.length        === 0) || (echelonArray.indexOf(obj.Echelon >=0)))
+                )){
+                    console.log("hi");
+                    //Push to our array
+                    bigResults.push(obj.LessonName, obj.Course);  
+
+                    var resultsUL = document.createElement('ul');
+
+                    resultsUL.setAttribute('class', 'resultsUL');
+
+                    $("<li/>").appendTo(resultsUL).html(obj.LessonName);
+                    $("<li/>").appendTo(resultsUL).html('# of items');  
+                    $("<li/>").appendTo(resultsUL).html(obj.Course);  
+                    $("<li/>").appendTo(resultsUL).html(obj.IndividualTask);  
+                    $("<li/>").appendTo(resultsUL).html(obj.CollectiveTask);  
+
+                    lessonList.append(resultsUL);
+                }
+            }
+        });
+        console.log(bigResults);
+        console.log(bigResults.length);
+        if (bigResults.length === 0){
+            lessonList.empty();
+        }
     });
 });
-
-// Parse the localStorage data:
-var data       = JSON.parse(localStorage.session); 
-//Create an array to store results
-
-var bigResults = [];
-
-function populateResults (criterion) {
-    // Loop over all the data:
-    data.forEach(function (obj){
-          if( 
-               ((courseArray.length         === 0) || courseArray.contains(obj.Course))
-            && ((coreCompetencyArray.length === 0) || coreCompetencyArray.contains(obj.CoreCompetency))
-            && ((wtspArray.length           === 0) || wtspArray.contains(obj.WTSP))
-            && ((indTaskArray.length        === 0) || indTaskArray.contains(obj.IndividualTask))
-            && ((colTaskArray.length        === 0) || colTaskArray.contains(obj.CollectiveTask))
-            && ((skillArray.length          === 0) || skillArray.contains(obj.SkillLevel))
-            && ((subkeyArray.length         === 0) || subkeyArray.contains(obj.SubkeyFunction))
-            && ((echelonArray.length        === 0) || echelonArray.contains(obj.Echelon))
-        ){
-            console.log("Everything is empty");
-        }
-        else{
-            console.log("Something is there")
-        }
-
-        //Push to our array
-        bigResults.push(obj.CoreCompetencies);
-        console.log(bigResults);
-            
-        // }
-    });
-}
-
-// what if I say, if a prop in the object matches the criterion && the obj.
 
 //Clears all options (unchecks checkboxes)
 $('#clearFilter').click(function(e){
@@ -187,49 +197,5 @@ $('#clearFilter').click(function(e){
     lessonList.empty();
 });
 
-// Create list items
-// Set list items' html equal to the obj's LessonName, etc.:
-// $("<li/>").appendTo(resultsUL).html(obj.LessonName);
-// $("<li/>").appendTo(resultsUL).html('# of items');  
-// $("<li/>").appendTo(resultsUL).html(obj.Course);  
-// $("<li/>").appendTo(resultsUL).html(obj.IndividualTask);  
-// $("<li/>").appendTo(resultsUL).html(obj.CollectiveTask);  
-
-// Append the list item to the resultsUL ul:
-// lessonList.append(resultsUL);
-
-function populateResults (criterion) {
-   if (lessonList.children().length === 0) {
-       // parse the localStorage data:
-       var data = JSON.parse(localStorage.session);
-       // loop over all the data:
-       data.forEach(function (obj) {
-
-           for (var prop in obj) {
-
-           if (obj[prop] === criterion) {
-
-               // Create an unordered list 
-               var resultsUL = document.createElement('ul');
-
-               resultsUL.setAttribute('class', 'resultsUL');
-
-
-               // Create a list item
-               // Set list items html equal to the obj's LessonName, etc.:
-               // Append the list item to the resultsUL ul:
-               
-               $("<li/>").appendTo(resultsUL).html(obj.LessonName);
-               $("<li/>").appendTo(resultsUL).html('# of items');  
-               $("<li/>").appendTo(resultsUL).html(obj.Course);  
-               $("<li/>").appendTo(resultsUL).html(obj.IndividualTask);  
-               $("<li/>").appendTo(resultsUL).html(obj.CollectiveTask);  
-
-               lessonList.append(resultsUL);
-               }
-           }
-       });
-   };
-};
 
 

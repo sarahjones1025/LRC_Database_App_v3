@@ -138,6 +138,8 @@ a{
     background-color: #ebebeb;
     width: 100%;
     margin: 0;
+    max-height: 300px;
+    overflow-y: scroll;
 }
 
 .main_selector li{
