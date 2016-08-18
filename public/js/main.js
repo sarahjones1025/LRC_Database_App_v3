@@ -2,6 +2,34 @@ var contents      = $('.contents');
 var toggleButton  = $('.toggle_button');
 var lessonResults = $('.lesson_results');
 var lessonList    = $('.lesson_list');
+var opTrain       = $('#op_train');
+var instTrain     = $('#inst_train');
+
+opTrain.on("click", function( e ){
+
+    $('.ops_training').addClass('show');
+
+    if( $('.inst_training').hasClass('show') ){
+        $('.inst_training').removeClass('show')
+    };
+
+
+    e.preventDefault();
+
+});
+
+instTrain.on("click", function( e ){
+
+    $('.inst_training').addClass('show');
+    $('').addClass('.active_training');
+
+    if( $('.ops_training').hasClass('show') ){
+        $('.ops_training').removeClass('show')
+    };
+
+    e.preventDefault();
+
+});
 
 //Expands and hides ul which gives list of available options
 toggleButton.on( "click", function( e ){

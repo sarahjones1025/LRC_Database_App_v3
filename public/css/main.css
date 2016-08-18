@@ -43,6 +43,38 @@ a{
 
 /*****************************/
 
+
+.upper_nav{
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #0051a8;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 30px;
+    padding: 100px 0px 10px 0px;
+}
+
+.upper_nav a{
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 4px;
+    border: solid 1px #0051a8;
+}
+
+.upper_nav a:hover{
+    border: solid 1px #fff;
+}
+
+.upper_nav a:active{
+    color: #0051a8;
+    background-color: #fff;
+    border: solid 1px #fff;
+}
+
 .ags_page main, .fms_page main, .ncoa_page main{
     padding: 10px;
 }
@@ -83,9 +115,19 @@ a{
     float: right;
 }
 
-/*.main_selector .show{
+.training_selection{
+    display: none;
+}
+
+.show{
     display: block;
-}*/
+}
+
+.active_training{
+    background-color: #6bb545;
+    border: solid 2px #6bb545;
+    color: #fff;
+}
 
 .box_1{
     z-index: 100;
@@ -328,7 +370,7 @@ main .query_result h3 {
 }
 
 .landing_page main{
-    padding: 10px;
+    padding: 110px 10px 10px 10px;
 }
 
 .landing_page header img{
@@ -336,6 +378,7 @@ main .query_result h3 {
     position: absolute;
     top: 20px;
     left: 7px;
+    z-index: 50;
 }
 
 .landing_page header {
@@ -350,6 +393,8 @@ main .query_result h3 {
     text-align: left;
     line-height: 1.2;
     font-family: Josefin Sans;
+    position: relative;
+    z-index: 50;
 }
 
 .landing_page main h1{
@@ -373,7 +418,7 @@ main .query_result h3 {
     background-color: #0051a8;
     color: #fff;
     text-decoration: none;
-    text-align: left;
+    text-align: center;
     padding: 15px 25px;
     margin-bottom: 9px;
     border: solid 2px #fff;
@@ -419,6 +464,20 @@ main .query_result h3 {
     
 @media screen and (min-width: 550px){
 
+    .upper_nav{
+        background-color: transparent;
+        width: 60%;
+        text-align: right;
+        top: -40px;
+        right: 0px;
+        left: 40.5%;
+        z-index: 60;
+    }
+
+    .upper_nav a{
+        color: #0051a8;
+    }
+
     .landing_page header {
         background-color: #0051a8;
         color: #444;
@@ -449,7 +508,7 @@ main .query_result h3 {
     }
 
     .landing_page main {
-         padding: 0; 
+         padding: 10px 0px; 
     }
 
     .main_nav{
@@ -459,6 +518,7 @@ main .query_result h3 {
     .main_nav a {
         padding: 20px 70px;
         font-size: 1.2em;
+        text-align: left;
     }
 
     .landing_page main h1 {
